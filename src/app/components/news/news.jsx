@@ -4,8 +4,9 @@ import './index.scss';
 
 const News_box = ({text,description})=> {
     const [active,setActive] = useState(false);
+    const [click,setClick] = useState(false);
     useEffect(()=> {
-if(active == false) {
+if(active == false && click == true) {
     document.querySelector('#news').scrollIntoView({
         behavior:'smooth'
     })
@@ -20,6 +21,7 @@ if(active == false) {
         </div>
         <div><button onClick={()=> {
             setActive(prev => !prev)
+            setClick(true)
         }} className='text-[#005494] font-[700] text-[24px] bg-white rounded-[8px] py-[4px] px-[12px]'>{active == false ?'Подробнее' : 'Скрыть'}</button></div>
     </div>
     )
