@@ -3,10 +3,11 @@ import './index.scss';
 
 export const Container = ()=> {
     return(
-       <div id='container' className='container_container w-full flex flex-col  mt-[48px] max-w-[2000px] mx-auto '>
+       <div id='container' className='container_container w-full flex flex-col  mt-[48px]  '>
         <div><Image quality={100} src={'/container.jpeg'} alt='Truck' width={400} height={400}/></div>
         <div >  
-              <div className='gruz_info_box bg-[#CBE8FF] px-[60px] flex flex-col gap-3 justify-between pb-[50px]  '>
+              <div className='gruz_info_box bg-[#CBE8FF] px-[60px] flex flex-col gap-6 justify-between pb-[50px]   '>
+                <div className='max-w-[2000px] mx-auto'>
                 <div className='description'>
                     <div className='mt-[30px]'><h1 className='text-[#005494] text-[48px] font-[700]'>Перевозка контейнеров
                     </h1></div>
@@ -15,7 +16,7 @@ export const Container = ()=> {
 Одно из основных преимуществ при перевозке грузов железнодорожным контейнером, это <span className='font-[700]'>безопасность и гарантия сохранности товара.</span>
 Данный вид перевозки подходит как для <span className='font-[700]'>юридических, так и для физических лиц.</span></p></div>
                 </div>
-                <div className='container_form_container max-w-[1210px] rounded-[8px] border border-[#005494] '>
+                <div className='container_form_container mt-[36px]  max-w-[1210px] rounded-[8px] border border-[#005494] '>
 <div className='title_box bg-[#005494] px-[35px] py-[10px] overflow-hidden'>
     <div><h1 className='text-white font-[700] text-[48px]'>Отправить груз</h1></div>
     <div><p className='font-[400] text-white text-[20px]'>Введите Ваши данные, чтобы отправить груз, и наш менеджер свяжется с Вами</p></div>
@@ -43,6 +44,7 @@ export const Container = ()=> {
 </div>
                 </div>
             </div></div>
+  </div>
        </div>
     )
 }

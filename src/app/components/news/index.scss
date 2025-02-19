@@ -5,7 +5,10 @@
     }
 }
 .news_block_disable {
-    height: 600px;
+    height: 550px;
+    @media (max-width:1728px) {
+        height: 600px;
+    }   
     @media (max-width:1064px) {
         height: 450px;
     }

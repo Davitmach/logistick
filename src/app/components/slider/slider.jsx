@@ -41,12 +41,15 @@ big:'/img4.jpeg'
 export const Slider = () => {
     const [index, setIndex] = useState(0);
     const [blocks, setBlocks] = useState(Blocks_data[0]);
-
+const [lastBlock,setLastBlock] = useState(null);
+const [nextImg, setNextImg] = useState(Blocks_data[1].big || null);
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
 
     useEffect(() => {
         setBlocks(Blocks_data[index]);
+        setLastBlock(index > 0 ? Blocks_data[index - 1] : null);
+     setNextImg(index < Blocks_data.length - 1 ? Blocks_data[index + 1].big : null);
     }, [index]);
 
     const HandlePrev = () => {
@@ -85,6 +88,11 @@ export const Slider = () => {
         touchStartX.current = 0;
         touchEndX.current = 0;
     };
+    useEffect(()=> {
+// console.log(lastBlock
+console.log(nextImg,'BIG');
+
+    },[lastBlock,nextImg])
     
 
     return(
@@ -93,18 +101,25 @@ export const Slider = () => {
           onTouchStart={handleTouchStart} 
           onTouchMove={handleTouchMove} 
           onTouchEnd={handleTouchEnd}>
-            <div className='max-w-[2000px] mx-auto w-full flex'>
-    <div className='left_bar px-[60px] py-[40px] flex flex-col gap-4 justify-center flex-1 z-50' >
+            <div className='max-w-[2000px] mx-auto w-full flex overflow-hidden '>
+    <div className=' left_bar px-[60px] py-[40px] flex flex-col gap-4 justify-center flex-1 z-50' >
         <div><p className='text-[#005494] font-[700] text-[48px] max-w-[848px] slider_title'>Перевозка сборных грузов автомобильным транспортом</p></div>
-        <div className='flex gap-[12px]   '>
-            <div className=' flex gap-[12px]  '>
-            <div className='w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] slider_block'>
+        <div className={`duration-500 flex gap-[12px]   `}>
+            <div className=' flex gap-[12px] relative  '>
+            {lastBlock !== null && 
+                <div className={`absolute w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] slider_block ${lastBlock !==null && '-left-[76%]'}`}>
+                <div className='w-full flex justify-center slider_block_img'><Image src={lastBlock.img} alt='ticket' width={120} height={120} /></div>
+                <div><h1 className='font-[700] text-[32px] text-[#005494] text-center slider_block_title'>{lastBlock.title}
+</h1></div>
+                <div><p className='font-[400] text-[24px] text-[#005494] text-center slider_block_description'>{lastBlock.description}</p></div>
+            </div>}
+            <div className={` w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] duration-300 slider_block  ${lastBlock !==null && 'translate-x-[30%]'}`}>
                 <div className='w-full flex justify-center slider_block_img'><Image src={blocks.img} alt='ticket' width={120} height={120} /></div>
                 <div><h1 className='font-[700] text-[32px] text-[#005494] text-center slider_block_title'>{blocks.title}
 </h1></div>
                 <div><p className='font-[400] text-[24px] text-[#005494] text-center slider_block_description'>{blocks.description}</p></div>
             </div>
-            
+       
             </div>
         </div>
         <div className='flex gap-[20px] slider_btn'>  
@@ -123,9 +138,10 @@ export const Slider = () => {
 
 
 
-    <div className='flex-1 Slider_img_box'>
+    <div className='flex-1 Slider_img_box flex translate-x-[10px] relative overflow-hidden'>
         {/* <img className='object-cover' src={blocks.big}/> */}
         <Image  quality={100} className='object-cover' src={blocks.big} alt='Img' width={400} height={400}/>
+        {index < Blocks_data.length -1 && nextImg !==null && <Image  quality={100} className=' absolute object-cover  -right-[75%] ' src={nextImg} alt='Img' width={400} height={400}/>}
     </div>
     </div>
     <div className='pagination absolute left-2/4 flex gap-[8px]'>{Blocks_data.map((e,i)=> (

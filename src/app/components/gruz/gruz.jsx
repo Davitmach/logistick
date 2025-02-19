@@ -5,14 +5,14 @@ export const Gruz = ()=> {
    <div className='px-[60px] gruz_container max-w-[2000px] mx-auto'>
 
     <div>
-        <div className='flex  justify-between gap-[48px]  py-[20px] mt-[20px]  info_container'>
+        <div className='  py-[20px] mt-[20px]  info_container '>
             <div className='float-left gruz_img_cont  rounded-[8px] overflow-hidden'><Image src={'/truckImg.jpeg'} alt='truck' width={200} height={200}/></div>
-            <div className='gruz_info_box flex flex-col gap-3 justify-between '>
-                <div className='description'>
+            {/* <div className='gruz_info_box flex flex-col gap-3  gruz_info '> */}
+                <div className='description flex flex-col gap-6'>
                     <div><h1 className='text-[#005494] text-[48px] font-[700]'>Перевозка сборных грузов</h1></div>
                     <div><p className='text-[#005494] font-[400] text-[32px]'>С точки зрения оптимизации расходов грузоперевозки <span className='font-[700]'>эффективнее</span> осуществлять крупными партиями — так называемыми генеральными грузами. Такой подход позволяет грузовладельцу существенно <span className='font-[700]'>сократить транспортные издержки и упростить процесс отслеживания груза.</span> В случаях, когда размер партии небольшой и её отправка в рамках генерального груза нецелесообразна. ООО ТК «TransNext» для оптимизации расходов на транспорт, предлагает своим клиентам <span className='font-[700]'>объединить товары в сборные грузы.</span></p></div>
                 </div>
-                <div className='form_container w-full rounded-[8px] border border-[#005494] '>
+                <div className='mt-[36px] form_container w-full rounded-[8px] border border-[#005494] '>
 <div className='title_box bg-[#005494] px-[35px] py-[10px] overflow-hidden'>
     <div><h1 className='text-white font-[700] text-[48px]'>Отправить груз</h1></div>
     <div><p className='font-[400] text-white text-[20px]'>Введите Ваши данные, чтобы отправить груз, и наш менеджер свяжется с Вами</p></div>
@@ -39,12 +39,13 @@ export const Gruz = ()=> {
         </div></div>
 </div>
                 </div>
-            </div>
+            {/* </div> */}
             
             
         </div>
         </div>
-        <div> <div className='form_container_low w-full rounded-[8px] border border-[#005494] '>
+        <div> 
+            {/* <div className='form_container_low w-full rounded-[8px] border border-[#005494] '>
 <div className='title_box bg-[#005494] px-[35px] py-[10px] overflow-hidden'>
     <div><h1 className='text-white font-[700] text-[48px]'>Отправить груз</h1></div>
     <div><p className='font-[400] text-white text-[20px]'>Введите Ваши данные, чтобы отправить груз, и наш менеджер свяжется с Вами</p></div>
@@ -70,7 +71,10 @@ export const Gruz = ()=> {
             </label>
         </div></div>
 </div>
-                </div></div>
+                </div> */}
+                
+                
+                </div>
         
         </div>
     )
