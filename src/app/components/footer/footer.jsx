@@ -1,15 +1,24 @@
+'use client';
 import './index.scss';
 import Image from 'next/image';
+import { useState } from 'react';
 export const Footer = ()=> {
+      
+        const [acitve,setActive] =useState(false);
+    
+   
     return(
+        <>
         <footer className='relative max-w-[2000px] mx-auto flex flex-col' >
             <div className='First_row border-b border-b-[#94D1FF] px-[60px] py-[48px] flex items-start justify-between'>
                 <div className='flex items-start gap-[63px] first-col'>
                     <div className='flex flex-col gap-[56px] mr-[50px]'>
                         <div><h1 className='text-[#005494] font-[900] text-[64px] footer_logo'><Image className='footer_logo' src={'/logo.svg'} alt='Logo' width={200} height={200}/></h1></div>
-                        <div><button className='text-white font-[600] text-[24px] bg-[#005494] rounded-[8px] px-[12px]' >Обратный звонок</button></div>
+                        <div><button className='text-white font-[600] text-[24px] bg-[#005494] rounded-[8px] px-[12px] text-nowrap' onClick={()=> {
+                             setActive((prev)=> !prev)
+                        }} >Заказать обратный звонок</button></div>
                     </div>
-                    <div className='flex gap-[63px]'>
+                    <div className='flex gap-[63px] footer_menu_items'>
                     <div>
                         <ul className='flex flex-col gap-6'>
                             <li><a href="#advantages" className='text-[#005494] font-[700] text-[24px]'>Услуги</a></li>
@@ -57,11 +66,50 @@ export const Footer = ()=> {
 
 
 
-            <div className='py-[32px] px-[60px] footer_last_row'><p className='text-[#005494] text-[24px]'>Транспортная компания "TransNext" © 2019
+            <div className='py-[32px] px-[60px] footer_last_row'><p className='text-[#005494] text-[24px] footer_info'>Транспортная компания "TransNext" © 2019
 
 Вся предоставленная информация и
 цены, указанные на сайте, носят
 информационный характер и не являются публичной офертой (ст. 437 ГК РФ).</p></div>
         </footer>
+        {acitve == true && 
+<div className='fixed left-0 top-0 flex items-center justify-center z-[9999999999] bg-black/60   w-full h-[100vh]'>
+      <div className=' max-w-[1210px] w-[70%] z-50 mt-[36px] fixed_form_container  rounded-[8px] border border-[#005494] '>
+      <div className='title_box bg-[#005494] px-[35px] py-[10px] overflow-hidden flex justify-between items-center'>
+        <div> <div><h1 className='text-white font-[700] text-[48px]'>Заявка на бесплатный расчет</h1></div>
+        <div><p className='font-[400] text-white text-[20px]'>Введите Ваши данные, чтобы отправить груз, и наш менеджер свяжется с Вами</p></div></div>
+        <div onClick={()=> {
+            setActive(false)
+        }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="54" height="54" fill="white">
+  <path d="M6.225 4.811a1 1 0 0 1 1.414 0L12 9.172l4.361-4.361a1 1 0 0 1 1.414 1.414L13.414 10.586l4.361 4.361a1 1 0 0 1-1.414 1.414L12 12l-4.361 4.361a1 1 0 0 1-1.414-1.414l4.361-4.361-4.361-4.361a1 1 0 0 1 0-1.414z"/>
+</svg>
+</div>
+         
+      </div>
+      <div className='bg-white form rounded-t-[8px] border-t border-t-[#005494] py-[16px] px-[35px] flex flex-col gap-4'>
+          <div className='flex gap-3 items-end'>
+              <div className='input_box'>
+                  <div className='mb-[20px]'><label htmlFor="" className='text-[#005494] font-[700] text-[24px]'>ФИО</label></div>
+                  <div><input className='outline-none border border-[#005494] rounded-[8px]' placeholder='Иванов Иван Иванович' type="text" /></div>
+              </div>
+              <div className='input_box'>
+                  <div className='mb-[20px]'><label htmlFor="" className='text-[#005494] font-[700] text-[24px]'>Телефон</label></div>
+                  <div><input className='outline-none border border-[#005494] rounded-[8px]' placeholder='8 800 707-53-40' type="text" /></div>
+              </div>
+              <div className='flex-1 '><button className='gruz_btn w-full text-white font-[700] text-[24px] bg-[#005494] rounded-[8px] py-[5px] px-[12px]'>Заказать</button></div>
+          </div>
+          <div> <div className="custom-checkbox-container">
+                  <label className="flex gap-2">
+                      <input type="checkbox" className="rounded-[8px] w-[28px] h-[28px]" />
+                      <span className="text-[#005494] text-[20px]">
+                      Я согласен(на) на обработку персональных данных
+                      </span>
+                  </label>
+              </div></div>
+      </div>
+                      </div>
+                      </div>
+}
+        </>
     )
 }
