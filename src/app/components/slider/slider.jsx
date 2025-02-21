@@ -41,14 +41,15 @@ big:'/img4.jpeg'
 export const Slider = () => {
     const [index, setIndex] = useState(0);
     const [blocks, setBlocks] = useState(Blocks_data[0]);
-const [lastBlock,setLastBlock] = useState(null);
+const [nextBlock,setNextBlock] = useState(null);
 const [nextImg, setNextImg] = useState(Blocks_data[1].big || null);
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
 
     useEffect(() => {
         setBlocks(Blocks_data[index]);
-        setLastBlock(index > 0 ? Blocks_data[index - 1] : null);
+        setNextBlock(index < Blocks_data.length - 1 ? Blocks_data[index + 1] : null);
+
      setNextImg(index < Blocks_data.length - 1 ? Blocks_data[index + 1].big : null);
     }, [index]);
 
@@ -89,10 +90,10 @@ const [nextImg, setNextImg] = useState(Blocks_data[1].big || null);
         touchEndX.current = 0;
     };
     useEffect(()=> {
-// console.log(lastBlock
+
 console.log(nextImg,'BIG');
 
-    },[lastBlock,nextImg])
+    },[nextBlock,nextImg])
     
 
     return(
@@ -106,14 +107,14 @@ console.log(nextImg,'BIG');
         <div><p className='text-[#005494] font-[700] text-[48px] max-w-[848px] slider_title'>Перевозка сборных грузов автомобильным транспортом</p></div>
         <div className={`duration-500 flex gap-[12px]   `}>
             <div className=' flex gap-[12px] relative  '>
-            {lastBlock !== null && 
-                <div className={`absolute w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] slider_block ${lastBlock !==null && '-left-[76%]'}`}>
-                <div className='w-full flex justify-center slider_block_img'><Image src={lastBlock.img} alt='ticket' width={120} height={120} /></div>
-                <div><h1 className='font-[700] text-[32px] text-[#005494] text-center slider_block_title'>{lastBlock.title}
+            {nextBlock !== null && 
+                <div className={`absolute w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] slider_block ${nextBlock !==null && '-left-[76%]'}`}>
+                <div className='w-full flex justify-center slider_block_img'><Image src={nextBlock.img} alt='ticket' width={120} height={120} /></div>
+                <div><h1 className='font-[700] text-[32px] text-[#005494] text-center slider_block_title'>{nextBlock.title}
 </h1></div>
-                <div><p className='font-[400] text-[24px] text-[#005494] text-center slider_block_description'>{lastBlock.description}</p></div>
+                <div><p className='font-[400] text-[24px] text-[#005494] text-center slider_block_description'>{nextBlock.description}</p></div>
             </div>}
-            <div className={` w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] duration-300 slider_block  ${lastBlock !==null && 'translate-x-[30%]'}`}>
+            <div className={` w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] duration-300 slider_block  ${nextBlock !==null && 'translate-x-[30%]'}`}>
                 <div className='w-full flex justify-center slider_block_img'><Image src={blocks.img} alt='ticket' width={120} height={120} /></div>
                 <div><h1 className='font-[700] text-[32px] text-[#005494] text-center slider_block_title'>{blocks.title}
 </h1></div>

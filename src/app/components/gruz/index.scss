@@ -116,8 +116,8 @@ input {
 }
 .form_container {
     grid-area:form;
-  @media (max-width:740px) {
-    margin-top: 0;
+  @media (max-width:638px) {
+    margin-top: 15px;
   }
 }
 .form_container_low {
@@ -126,12 +126,15 @@ input {
 }
 .info_container {
     display: grid;
-    grid-template-areas: "img info"
-    "img form";
+    grid-template-areas: "img  info"
+    "img  form";
     grid-column-gap: 30px;
-    @media (max-width:1208px) {
-      gap: 14px;
-    }
+    grid-template-columns: 0.34fr  1fr; /* Увеличиваем img (2fr 2fr) по сравнению с info (1fr) */
+    grid-template-rows: .1fr .1fr;
+  
+    @media (max-width:1374px) {
+        grid-template-columns: 0.44fr  1fr;
+      }
  @media (max-width:988px) {
     grid-template-areas: "img info"
     "form form";
@@ -140,6 +143,8 @@ input {
     grid-template-areas: "img"
     "info"
     "form";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
  }
 }
 .inputs {

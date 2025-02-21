@@ -2,7 +2,7 @@ import './index.scss';
 
 export const How = ()=> {
     return(
-        <div className='how_container bg-[#CBE8FF] w-full  mt-[72px] py-[40px]'>
+        <div className='how_container bg-[#CBE8FF] w-full  mt-[42px] py-[40px]'>
             <div className='max-w-[2000px] mx-auto'>
             <div className='how_title px-[60px]'><h1 className='text-[#005494] font-[700] text-[48px]'>Как мы работаем</h1></div>
             <div className='how_box px-[60px] mt-[48px]'>

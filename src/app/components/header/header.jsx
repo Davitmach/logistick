@@ -5,6 +5,7 @@ import './index.scss';
 
 export const Header = ()=> {
     const [menu,setMenu] = useState(false);
+    const [acitve,setActive] =useState(false);
 
     const HandleChange = ()=> {
         setMenu((prev)=> !prev)
@@ -33,7 +34,9 @@ export const Header = ()=> {
                      <div className='font-[400] text-[24px] text-[#005494] text-nowrap header_info_text'>8 (800) 707-53-40</div>
                         </div>
                     </div>
-                    <div><button className='header_btn text-nowrap outline-none border-none font-[700] text-[24px] text-white bg-[#005494] rounded-[8px] py-[10px] px-[12px]'><a href="#container">Онлайн - заявка</a></button></div>
+                    <div><button className='header_btn text-nowrap outline-none border-none font-[700] text-[24px] text-white bg-[#005494] rounded-[8px] py-[10px] px-[12px]' onClick={()=> {
+                        setActive((prev)=> !prev)
+                    }}>Онлайн - заявка</button></div>
                     <div className='menu_btn hidden' onClick={HandleChange}><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18 5H5M18 1H1M18 9H1M18 13H5" stroke="#005494" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
@@ -78,6 +81,44 @@ export const Header = ()=> {
                 </ul>
             </div>
         </header>
+{acitve == true && 
+<div className='fixed left-0 top-0 flex items-center justify-center z-[9999999999] bg-black/60   w-full h-[100vh]'>
+      <div className=' max-w-[2000px] w-[70%] z-50 mt-[36px] fixed_form_container  rounded-[8px] border border-[#005494] '>
+      <div className='title_box bg-[#005494] px-[35px] py-[10px] overflow-hidden flex justify-between items-center'>
+        <div> <div><h1 className='text-white font-[700] text-[48px]'>Заявка на бесплатный расчет</h1></div>
+        <div><p className='font-[400] text-white text-[20px]'>Введите Ваши данные, чтобы отправить груз, и наш менеджер свяжется с Вами</p></div></div>
+        <div onClick={()=> {
+            setActive(false)
+        }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="54" height="54" fill="white">
+  <path d="M6.225 4.811a1 1 0 0 1 1.414 0L12 9.172l4.361-4.361a1 1 0 0 1 1.414 1.414L13.414 10.586l4.361 4.361a1 1 0 0 1-1.414 1.414L12 12l-4.361 4.361a1 1 0 0 1-1.414-1.414l4.361-4.361-4.361-4.361a1 1 0 0 1 0-1.414z"/>
+</svg>
+</div>
+         
+      </div>
+      <div className='bg-white form rounded-t-[8px] border-t border-t-[#005494] py-[16px] px-[35px] flex flex-col gap-4'>
+          <div className='flex gap-3 items-end'>
+              <div className='input_box'>
+                  <div className='mb-[20px]'><label htmlFor="" className='text-[#005494] font-[700] text-[24px]'>ФИО</label></div>
+                  <div><input className='outline-none border border-[#005494] rounded-[8px]' placeholder='Иванов Иван Иванович' type="text" /></div>
+              </div>
+              <div className='input_box'>
+                  <div className='mb-[20px]'><label htmlFor="" className='text-[#005494] font-[700] text-[24px]'>Телефон</label></div>
+                  <div><input className='outline-none border border-[#005494] rounded-[8px]' placeholder='8 800 707-53-40' type="text" /></div>
+              </div>
+              <div className='flex-1 '><button className='gruz_btn w-full text-white font-[700] text-[24px] bg-[#005494] rounded-[8px] py-[5px] px-[12px]'>Заказать</button></div>
+          </div>
+          <div> <div className="custom-checkbox-container">
+                  <label className="flex gap-2">
+                      <input type="checkbox" className="rounded-[8px] w-[28px] h-[28px]" />
+                      <span className="text-[#005494] text-[20px]">
+                      Я согласен(на) на обработку персональных данных
+                      </span>
+                  </label>
+              </div></div>
+      </div>
+                      </div>
+                      </div>
+}
         </>
     )
 }

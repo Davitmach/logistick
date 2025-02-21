@@ -44,9 +44,14 @@ font-size: 16px;
         font-size: 16px;
         
           }
+          @media (max-width: 900px) {
+            font-size: 14px;
+            
+              }
 }
 .Slider_img_box {
   width: 100%;
+  aspect-ratio: 1/.8;
   img {
     width: 100%;
     aspect-ratio: 1/1;

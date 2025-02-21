@@ -3,7 +3,7 @@ import './index.scss';
 
 export const Advantages = ()=> {
     return(
-        <div id='advantages' className='advantages_container w-full px-[60px] mt-[84px] max-w-[2000px] mx-auto'>
+        <div id='advantages' className='advantages_container w-full px-[60px] mt-[44px] max-w-[2000px] mx-auto'>
             <div className='adventages_title'><h1 className='text-[#005494] font-[700] text-[48px]'>Наши преимущества</h1></div>
             <div className='advantages_box'>
                 <div>

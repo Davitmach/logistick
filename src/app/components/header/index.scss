@@ -102,3 +102,35 @@ z-index: 99999999999999;
     }
 }
 }
+.fixed_form_container {
+    @media (max-width:817px) {
+        h1 {
+            font-size: 15px;
+        }
+        p {
+            font-size: 15px;
+        }
+        span {
+            font-size: 13px;
+        }
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    @media (max-width:781px) { 
+        width: 80%;
+    }
+    @media (max-width:485px) { 
+        width: 90%;
+    }
+    @media (max-width:445px) { 
+        width: 95%;
+        input {
+            &::placeholder {
+                font-size: 10px;
+                left: 4px;
+            }
+        }
+    }
+}

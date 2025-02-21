@@ -27,15 +27,16 @@ margin-top: 40px;
 gap: 10px;
 }
         &>div {
-            width: 351px;
+           flex: 1 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 30px;
             flex-shrink: 0;
-            @media (max-width:1209px) {
-                width: 200px;
+         
+            @media (max-width:852px) {
+                flex: none;
             }
             @media (max-width:672px) {
                 width: 150px;
@@ -69,6 +70,8 @@ gap: 10px;
                  }
             }
             img {
+                width: 150px;
+                height: 150px;
                 @media (max-width:1560px) {
                    width: 140px;
                    height: 140px;
