@@ -29,9 +29,9 @@ if(active == false && click == true) {
 }
 export const News = ()=> {
     return(
-        <div id='news' className='news_container py-[48px] px-[60px] max-w-[2000px] m-auto flex flex-col  relative'>
+        <div id='news' className='news_container py-[40px] px-[60px] max-w-[2000px] m-auto flex flex-col  relative'>
             <div><h1 className='text-[#005494] font-[700] text-[48px] news_title'>Новости</h1></div>
-            <div className='flex gap-20 w-full  news_scroll mt-[24px] '>
+            <div className='flex gap-20 w-full  news_scroll mt-[40px] '>
           
                 <News_box  img={'/statya1.jpg'}  text={'Как мы доставили хрупкий антиквариат через всю Россию: история одного необычного заказа'} description={`Грузоперевозки по России — это не только контейнеры и паллеты. Иногда нам доверяют настоящие сокровища! В прошлом месяце к нам обратился клиент, которому нужно было перевезти старинный рояль XIX века из Санкт-Петербурга во Владивосток.  
 

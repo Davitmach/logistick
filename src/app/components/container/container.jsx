@@ -5,9 +5,9 @@ export const Container = ()=> {
     return(
        <div id='container' className='container_container w-full flex flex-col  mt-[48px]  '>
         <div><Image quality={100} src={'/container.jpeg'} alt='Truck' width={400} height={400}/></div>
-        <div >  
+        <div className='' >  
               <div className='gruz_info_box bg-[#CBE8FF] px-[60px] flex flex-col gap-6 justify-between pb-[50px]   '>
-                <div className='max-w-[2000px] mx-auto'>
+                <div className=' pt-[25px] max-w-[2000px] mx-auto'>
                 <div className='description'>
                     <div className='mt-[30px]'><h1 className='text-[#005494] text-[48px] font-[700]'>Перевозка контейнеров
                     </h1></div>

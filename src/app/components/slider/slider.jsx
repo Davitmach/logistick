@@ -103,12 +103,12 @@ console.log(nextImg,'BIG');
           onTouchMove={handleTouchMove} 
           onTouchEnd={handleTouchEnd}>
             <div className='max-w-[2000px] mx-auto w-full flex overflow-hidden '>
-    <div className=' left_bar px-[60px] py-[40px] flex flex-col gap-4 justify-center flex-1 z-50' >
+    <div className=' left_bar px-[60px] py-[40px] flex flex-col gap-[48px] justify-center flex-1 z-50' >
         <div><p className='text-[#005494] font-[700] text-[48px] max-w-[848px] slider_title'>Перевозка сборных грузов автомобильным транспортом</p></div>
         <div className={`duration-500 flex gap-[12px]   `}>
-            <div className=' flex gap-[12px] relative  '>
+            <div className=' flex gap-[12px] relative  mt-[20px] '>
             {nextBlock !== null && 
-                <div className={`absolute w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] slider_block ${nextBlock !==null && '-left-[76%]'}`}>
+                <div className={` absolute w-[531px] h-[430px] bg-white rounded-[8px] px-[16px] py-[20px] slider_block ${nextBlock !==null && '-left-[76%]'}`}>
                 <div className='w-full flex justify-center slider_block_img'><Image src={nextBlock.img} alt='ticket' width={120} height={120} /></div>
                 <div><h1 className='font-[700] text-[32px] text-[#005494] text-center slider_block_title'>{nextBlock.title}
 </h1></div>
