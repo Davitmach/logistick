@@ -48,8 +48,8 @@ export const Footer = ()=> {
 </svg>
 </div>
                         <div>
-                            <div><h1 className='text-[#005494] text-[24px]'>8 (495) 374-51-55</h1></div>
-                            <div><h1 className='text-[#005494] text-[24px]'>8 (800) 707-53-40</h1></div>
+                            <div><h1 className='text-[#005494] text-[24px]'>+7(495)0113995</h1></div>
+                            {/* <div><h1 className='text-[#005494] text-[24px]'>8 (800) 707-53-40</h1></div> */}
                         </div>
                     </div>
                     <div className='flex items-center gap-[19px] geo'>
