@@ -96,7 +96,7 @@ export const Header = ()=> {
             <div className={`menu w-full flex items-center justify-center py-[24px] border-b border-b-[#94D1FF] ${menu == true ? 'menu_active':'menu_disable'}`}>
                 <ul className='flex gap-11'>
                     <li><a href="#container" className='text-[#005494] font-[400] text-[24px]'>Услуги</a></li>
-                    <li><a href="/price.docx" className='text-[#005494] font-[400] text-[24px]'>Тарифы</a></li>
+                    <li><a href="https://docs.google.com/document/d/1huGiXDx5jBjFGtDsn5yVmsIzDTVKIR3G/edit?usp=drive_link&ouid=112087202378903553016&rtpof=true&sd=true" target='_blank' className='text-[#005494] font-[400] text-[24px]'>Тарифы</a></li>
                     <li><a href="#news" className='text-[#005494] font-[400] text-[24px]'>Новости</a></li>
                     <li><a href="" className='text-[#005494] font-[400] text-[24px]'>Документация</a></li>
                     <li><a href="" className='text-[#005494] font-[400] text-[24px]'>Контакты</a></li>

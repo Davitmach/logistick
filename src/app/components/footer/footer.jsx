@@ -22,7 +22,7 @@ export const Footer = ()=> {
                     <div>
                         <ul className='flex flex-col gap-6'>
                             <li><a href="#advantages" className='text-[#005494] font-[700] text-[24px]'>Услуги</a></li>
-                            <li><a href="/price.docx" className='text-[#005494] font-[700] text-[24px]'>Тарифы</a></li>
+                            <li><a href="https://docs.google.com/document/d/1huGiXDx5jBjFGtDsn5yVmsIzDTVKIR3G/edit?usp=drive_link&ouid=112087202378903553016&rtpof=true&sd=true" target='_blank' className='text-[#005494] font-[700] text-[24px]'>Тарифы</a></li>
                             <li><a href="#news" className='text-[#005494] font-[700] text-[24px]'>Новости</a></li>
                         </ul>
                     </div>
