@@ -25,7 +25,7 @@ export const Header = ()=> {
                         <div><p className='header_info_text text-[#005494] text-[24px] font-[400] max-w-[516px] w-full'>Пн-Пт: с 09:00 до 18:00 (время московское)Сб-Вс: выходной</p></div>
                     </div>
                     <div className='flex items-center gap-[19px] header_info_box'>
-                        <div><svg className='Header_svg' width="51" height="61" viewBox="0 0 51 61" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.5 33.35C30.367 33.35 34.3125 29.522 34.3125 24.8C34.3125 20.078 30.367 16.25 25.5 16.25C20.633 16.25 16.6875 20.078 16.6875 24.8C16.6875 29.522 20.633 33.35 25.5 33.35Z" stroke="#005494" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M25.5 59C37.25 47.6 49 37.3921 49 24.8C49 12.2079 38.4787 2 25.5 2C12.5213 2 2 12.2079 2 24.8C2 37.3921 13.75 47.6 25.5 59Z" stroke="#005494" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        <div><svg className='Header_svg' width="51" height="61" viewBox="0 0 51 61" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.5 33.35C30.367 33.35 34.3125 29.522 34.3125 24.8C34.3125 20.078 30.367 16.25 25.5 16.25C20.633 16.25 16.6875 20.078 16.6875 24.8C16.6875 29.522 20.633 33.35 25.5 33.35Z" stroke="#005494" strokeidth="4" strokeLinecap="round" strokeLinejoin="round"></path><path d="M25.5 59C37.25 47.6 49 37.3921 49 24.8C49 12.2079 38.4787 2 25.5 2C12.5213 2 2 12.2079 2 24.8C2 37.3921 13.75 47.6 25.5 59Z" stroke="#005494" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"></path></svg>
 </div>
                         <div>
                      <div className='font-[400] text-[24px] text-[#005494]  header_info_text max-[300px]'>Адрес компании г. Москва, ул. Платформа Северянин, вл.14, стр.1</div>
@@ -67,8 +67,8 @@ export const Header = ()=> {
                     </div>
                     <div className='flex items-center gap-[19px] '>
                         <div><svg width="22" height="22" viewBox="0 0 51 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.5 33.35C30.367 33.35 34.3125 29.522 34.3125 24.8C34.3125 20.078 30.367 16.25 25.5 16.25C20.633 16.25 16.6875 20.078 16.6875 24.8C16.6875 29.522 20.633 33.35 25.5 33.35Z" stroke="#CBE8FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.5 59C37.25 47.6 49 37.3921 49 24.8C49 12.2079 38.4787 2 25.5 2C12.5213 2 2 12.2079 2 24.8C2 37.3921 13.75 47.6 25.5 59Z" stroke="#CBE8FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.5 33.35C30.367 33.35 34.3125 29.522 34.3125 24.8C34.3125 20.078 30.367 16.25 25.5 16.25C20.633 16.25 16.6875 20.078 16.6875 24.8C16.6875 29.522 20.633 33.35 25.5 33.35Z" stroke="#CBE8FF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M25.5 59C37.25 47.6 49 37.3921 49 24.8C49 12.2079 38.4787 2 25.5 2C12.5213 2 2 12.2079 2 24.8C2 37.3921 13.75 47.6 25.5 59Z" stroke="#CBE8FF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
 
