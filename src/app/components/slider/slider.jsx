@@ -142,7 +142,7 @@ console.log(nextImg,'BIG');
     <div className='flex-1 Slider_img_box flex translate-x-[10px] relative overflow-hidden'>
         {/* <img className='object-cover' src={blocks.big}/> */}
         <Image  quality={100} className='object-cover' src={blocks.big} alt='Img' width={400} height={400}/>
-        {index < Blocks_data.length -1 && nextImg !==null && <Image  quality={100} className=' absolute object-cover  -right-[75%] ' src={nextImg} alt='Img' width={400} height={400}/>}
+        {index < Blocks_data.length -1 && nextImg !==null && <Image  quality={100} className=' absolute object-cover h-full  -right-[75%] ' src={nextImg} alt='Img' width={400} height={400}/>}
     </div>
     </div>
     <div className='pagination absolute left-2/4 flex gap-[8px]'>{Blocks_data.map((e,i)=> (

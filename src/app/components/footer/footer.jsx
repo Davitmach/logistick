@@ -22,7 +22,7 @@ export const Footer = ()=> {
                     <div>
                         <ul className='flex flex-col gap-6'>
                             <li><a href="#advantages" className='text-[#005494] font-[700] text-[24px]'>Услуги</a></li>
-                            <li><a href="#container" className='text-[#005494] font-[700] text-[24px]'>Тарифы</a></li>
+                            <li><a href="/price.docx" className='text-[#005494] font-[700] text-[24px]'>Тарифы</a></li>
                             <li><a href="#news" className='text-[#005494] font-[700] text-[24px]'>Новости</a></li>
                         </ul>
                     </div>
@@ -58,8 +58,7 @@ export const Footer = ()=> {
 <path d="M25.5 59C37.25 47.6 49 37.3921 49 24.8C49 12.2079 38.4787 2 25.5 2C12.5213 2 2 12.2079 2 24.8C2 37.3921 13.75 47.6 25.5 59Z" stroke="#005494" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 </div>
-                        <div><p className='text-[#005494] text-[24px] max-w-[521px]'>г. Москва,
-                        ул. Платформа Северянин,вл. 14, стр. 1</p></div>
+                        <div><p className='text-[#005494] text-[24px] max-w-[521px]'>Адрес компании г. Москва, ул. Платформа Северянин, вл.14, стр.1</p></div>
                     </div>
                 </div>
             </div>
