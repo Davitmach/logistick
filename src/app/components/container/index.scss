@@ -13,12 +13,14 @@
 }
 .input_box {
     input {
-        -webkit-appearance: none;
-        text-align: center;
+        padding-top: 8px; /* Настроить верхний отступ */
+        padding-bottom: 8px; /* Настроить нижний отступ */
+        line-height: 1.5; /* Установить высоту строки */
         position: relative;
         &::placeholder {
             position: absolute;
             top: 50%;
+            line-height: 1.5; 
         }
     }
 }
