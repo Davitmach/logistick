@@ -25,6 +25,21 @@ a {
        
      }
 }
+.soc_text {
+    @media (max-width:950px) {
+        display: none;
+    }
+}
+.tg,.wa {
+    svg {
+        width: 51px;
+        height: 51px;
+        @media (max-width:950px) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
 .first-col {
     button {
         @media (max-width:1276px) {
@@ -40,7 +55,7 @@ a {
     @media (max-width:1462px) {
        gap: 0px;
     }
-    @media (max-width:689px) {
+    @media (max-width:778px) {
         flex-direction: column;
         padding: 10px 16px;
         gap: 13px;
@@ -52,7 +67,7 @@ a {
     @media (max-width:1064px) {
         padding: 48px 16px;
     }
-    @media (max-width:689px) {
+    @media (max-width:778px) {
         flex-direction: column;
         padding-bottom: 10px;
         padding-left: 0; 
@@ -60,12 +75,12 @@ a {
     }
 }
 .geo {
-    @media (max-width:689px) {
+    @media (max-width:778px) {
         display: none;
     }
 }
 .footer_phone {
-    @media (max-width:689px) {
+    @media (max-width:778px) {
         position: absolute;
         top: 64px; 
         right: 5%;
@@ -79,7 +94,7 @@ a {
     }
 }
 .footer_grafik {
-    @media (max-width:689px) {
+    @media (max-width:778px) {
         width: 100%;
         border-top: 1px solid #94D1FF;
         padding-top: 10px;
@@ -104,7 +119,7 @@ a {
     }
 }
 .footer_items {
-    @media (max-width:689px) {
+    @media (max-width:778px) {
       width: 100%;
 
       p {
@@ -157,7 +172,7 @@ svg {
         width: 20px;
         height: 20px;
      }
-     @media (max-width:689px) {
+     @media (max-width:778px) {
         width: 24px;
         height: 24px;
      }
@@ -179,7 +194,7 @@ p {
     @media (max-width:1462px) {
         font-size: 17px !important;
     }   
-    @media (max-width:689px) {
+    @media (max-width:778px) {
         font-size: 10px !important;
     }   
 }

@@ -18,7 +18,8 @@ export const Footer = ()=> {
                              setActive((prev)=> !prev)
                         }} >Заказать обратный звонок</button></div>
                         <div className='flex gap-[10px]'>
-                        <div className='wa'>
+                            <div className='flex items-center justify-center gap-[14px]'>
+                                   <div className='wa'>
                         <a target='blank' href="https://api.whatsapp.com/message/3C4B7F533MSHF1?autoload=1&app_absent=0">
                     <svg width="25" height="25" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.5581 0.5H25.4419C11.3907 0.5 0 11.8907 0 25.9419V26.0581C0 40.1093 11.3907 51.5 25.4419 51.5H25.5581C39.6093 51.5 51 40.1093 51 26.0581V25.9419C51 11.8907 39.6093 0.5 25.5581 0.5Z" fill="#005494"/>
@@ -26,8 +27,11 @@ export const Footer = ()=> {
 <path d="M42.0447 24.5678C41.6927 20.5904 39.8701 16.9007 36.913 14.1794C33.938 11.4421 30.0786 9.93406 26.0423 9.93406C17.1834 9.93406 9.97557 17.1419 9.97557 26.0008C9.97557 28.974 10.7957 31.8703 12.3484 34.3932L8.88562 42.0585L19.9726 40.8775C21.9005 41.6672 23.941 42.0675 26.0405 42.0675C26.5926 42.0675 27.159 42.0389 27.7272 41.9799C28.2275 41.9263 28.7332 41.8477 29.2299 41.7476C36.6486 40.2485 42.0643 33.6642 42.1072 26.0865V26.0008C42.1072 25.5183 42.0857 25.0359 42.0429 24.5678H42.0447ZM20.3996 37.513L14.2656 38.1669L16.0971 34.1092L15.7308 33.6178C15.704 33.5821 15.6772 33.5463 15.6468 33.5052C14.0566 31.3093 13.2168 28.7149 13.2168 26.0025C13.2168 18.9305 18.9702 13.1771 26.0423 13.1771C32.6676 13.1771 38.2835 18.3462 38.8249 24.9448C38.8535 25.2986 38.8695 25.6541 38.8695 26.0043C38.8695 26.1044 38.8678 26.2027 38.866 26.3081C38.7302 32.2241 34.5974 37.2485 28.8153 38.5279C28.374 38.6261 27.922 38.7012 27.4717 38.7494C27.0035 38.803 26.5229 38.8298 26.0458 38.8298C24.3466 38.8298 22.6956 38.5011 21.1358 37.8507C20.9625 37.781 20.7927 37.7059 20.6337 37.6291L20.4014 37.5165L20.3996 37.513Z" fill="#FDFDFD"/>
 </svg></a>
 
-                    </div>
-<div className='tg'>
+                  </div>
+                                <div className='text-[#005494] text-[24px] soc_text'>WhatsApp</div>
+                            </div>
+                            <div className='flex items-center justify-center gap-[14px]'>
+                            <div className='tg'>
     <a target='blank' href="https://t.me/Trans_Next">
 <svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_318_61)">
@@ -46,6 +50,10 @@ export const Footer = ()=> {
 </svg>
 </a>
 </div>
+<div className='text-[#005494] text-[24px] soc_text'>Telegram</div>
+                            </div>
+                  
+
                         </div>
                     </div>
                     <div className='flex gap-[63px] footer_menu_items'>
