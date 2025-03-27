@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Evolventa';
+  src: url('/font/Evolventa-Regular.otf') format('opentype');
+
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Evolventa';
+  src: url('/font/Evolventa-Bold.otf') format('opentype');
+
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Evolventa';
+  src: url('/font/Evolventa-Bold.otf') format('opentype');
+
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+body,html {
+  scroll-behavior: smooth;
+}
+ * {
+  
+  &::-webkit-scrollbar {
+    width: 8px;  /* Ширина скролл-бара */
+    height: 6px; /* Высота скролл-бара (для горизонтального скроллинга) */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Цвет фона полосы прокрутки */
+    border-radius: 10px;   /* Закругление углов фона */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #005494;  /* Цвет самой полосы прокрутки */
+    border-radius: 10px; /* Закругление углов полосы */
+  }
+  
+ 
+ }
+ body {
+  font-family:'Evolventa';
+}
+
