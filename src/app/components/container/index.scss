@@ -13,6 +13,8 @@
 }
 .input_box {
     input {
+        -webkit-appearance: none;
+        text-align: center;
         position: relative;
         &::placeholder {
             position: absolute;
