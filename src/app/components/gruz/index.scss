@@ -24,11 +24,12 @@
 input {
     position: relative;
     &::placeholder {
-        position: absolute;
-        top: 50%;
-        left: 14px;
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 14px;
+        // transform: translateY(-50%);
         color: #5884B7;
+        
         font-size: 24px;
         @media (max-width:1658px) {
             font-size: 14px;
