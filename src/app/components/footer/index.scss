@@ -1,5 +1,11 @@
 p {
-    line-height: 1;
+    // line-height: 1;
+}
+.mail_footer_low_res {
+    display: none;
+    @media (max-width:778px) {
+display: flex;
+    }
 }
 a {
    
@@ -44,6 +50,7 @@ a {
     button {
         @media (max-width:1276px) {
             font-size: 14px;
+            // width: 30px;
         }
     }
     &>div {
